@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<link rel="stylesheet" type="text/css" href="FB.css">
+	<script type="text/javascript">
+		var baseURL = "https://graph.facebook.com/v2.8/";
+		var appToken = "517733218411810|34df2ec8b2d7e094aa741d09df0edaa0";
+		var SearchConstants = {
+								        NO_CONTENT: 'No Content to display',
+								        NO_SEARCH_CRITERIA: 'No Search Criteria',
+								        SEARCHED_FOR: 'Searched for',
+								        SEARCH_INPUT_MESSAGE: 'Search text..',
+								        SEARCH_TITLE: 'Page Search'
+								};
+	</script>
+	<script type="text/javascript" src="FBUtil.js"></script>
+	<script type="text/javascript" src="FBListView.js"></script>
+	<script type="text/javascript" src="FB.js"></script>
+	<script>		 
+		function searchInit(){
+			var _cont = document.getElementById('search_cont');
+			SearchController.init(_cont);
+		}
+	</script>
+</head>
+<body onload="searchInit()">
+	<div id="search_cont"></div>
+</body>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</html>
