@@ -1,0 +1,279 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: outside none none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+input:focus {
+    outline: medium none;
+}
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    -moz-user-select: none;
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+div#search_cont {
+    box-shadow: 0 0 8px #cacaca;
+    height: calc(100% - 21px);
+    height: 99%;
+    margin: auto;
+    margin-top: 4px;
+    max-width: 800px;
+    overflow: hidden;
+    width: 100%;
+}
+.search-header {
+    background: white none repeat scroll 0 0;
+    height: 85px;
+    padding: 5px;
+    transition: height 0.8s ease 0s;
+}
+.search-header > .search-box-cont {
+    display: flex;
+    left: 50%;
+    margin-left: -15%;
+    margin-top: 20px;
+    min-width: 150px;
+    position: relative;
+    width: 30%;
+}
+.search-header.init-load {
+    height: 100%;
+}
+.search-header.init-load > .search-box-cont {
+    left: 0;
+    margin: auto;
+    top: 20%;
+}
+
+.search-header > .search-header-title {
+    left: 0;
+    margin: auto;
+    top: 18%;
+    width: 200px;
+    font-size: 27px;
+    text-align: -webkit-center;
+    color: #ffb445;
+    position: relative;
+    /* background-color: white; */
+    display: block;
+}
+
+.search-header > .search-header-title::before {
+    color: #ffb445;
+    font-size: 26px;
+    margin-right: 5px;
+    padding: 4px;
+}
+
+.search-header > .search-box-cont > .search-box-input {
+    border: 1px solid #d0d0d0;
+    border-radius: 5px 0 0 5px;
+    padding: 3px;
+    width: 100%;
+}
+.search-header > .search-box-cont > .search-box-btn {
+    background-color: #ffb445;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    font-size: 16px;
+    height: 25px;
+    padding: 4px 4px 4px 6px;
+    width: 29px;
+}
+.List-cont {
+    background: #eceeef none repeat scroll 0 0;
+    font-weight: 100;
+    height: calc(100% - 139px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.List-cont > .list-item-cont {
+    padding: 0 14px;
+    width: 100%;
+    display: none;
+}
+
+.List-cont > .list-item-cont.visible {
+    display: block;
+}
+
+.List-cont > .list-item-cont > .list-no-content {
+    color: gray;
+    font-size: 1.5em;
+    margin: 10px;
+    text-align: center;
+    display: none;
+}
+
+.List-cont > .list-item-cont > .list-no-content.visible {
+    display: block;
+}
+
+.List-cont > .err-notifier {
+    background-color: white;
+    border-radius: 0 7px 7px 0;
+    border-style: solid solid solid none;
+    border-width: 2px 2px 2px 0;
+    bottom: 100px;
+    color: gray;
+    display: none;
+    font-family: ariel;
+    font-size: 1.1em;
+    overflow: hidden;
+    padding: 6px;
+    position: absolute;
+    transition: width 0.8s ease 0s;
+}
+.List-cont > .err-notifier.expanded {
+    display: block;
+    width: 240px;
+}
+.List-cont > .list-item-cont > div.tile-item {
+    background-color: #ffffff;
+    border: 1px solid #f3f3f3;
+    box-shadow: 0 0 3px #d4d4d4;
+    color: #9a9a9a;
+    font-family: arial;
+    font-size: 13px;
+    margin: 5px auto auto;
+    min-height: 100px;
+    padding: 3px;
+}
+div.tile-item > .tile-header {
+    display: flex;
+    margin: 1px 0;
+}
+div.tile-item > .tile-header > .tile-picture {
+    background-color: whitesmoke;
+    height: 55px;
+    width: 60px;
+}
+div.tile-item > .tile-header > .tile-actions {
+    color: darkgrey;
+    font-size: 14px;
+}
+div.tile-item > .tile-header > .tile-actions .action {
+    margin: 3px;
+    padding: 1px;
+}
+div.tile-item > .tile-header > .tile-actions .action.fa.fa-trash {
+    font-size: 1.1em;
+}
+
+.action.fa.fa-star.fav-selected {
+    color: #ffa41e;
+}
+
+div.tile-item > .tile-header > .tile-title {
+    width: calc(100% - 125px);
+    padding: 4px;
+}
+div.tile-item > .tile-about {
+    margin: 8px 2px;
+    color: #7b7979;
+}
+.tile-content {max-height: 400px;overflow: hidden;transition: max-height 2s;}
+
+.tile-content.expanded {
+    max-height: initial;
+}
+
+.basic.basic-1 {
+    color: #504f4f;
+    font-weight: 700;
+}
+
+.basic {
+    margin: 2px;
+}
+div.tile-item > .tile-content > .tile-cover {
+    background-color: whitesmoke;
+    height: 240px;
+    width: 100%;
+}
+div.tile-item > .tile-content > .tile-description {
+    margin: 4px 2px;
+    color: #313131;
+}
+div.tile-item > .tile-footer {
+    height: 25px;
+    margin: 3px 0;
+}
+div.tile-item img.rImg {
+    height: 100%;
+    width: 100%;
+}
+div.tile-item div.tile-description > pre {
+    background-color: inherit;
+    border: 0 none;
+    font-family: inherit;
+    white-space: pre-line;
+    width: 100%;
+}
+div.result-heading-cont {
+    background-color: #ffa41e;
+    color: white;
+    font-family: sans-serif;
+    font-size: 21px;
+    height: 35px;
+    padding: 5px;
+}
+div.result-heading-cont > span.searched-for {
+}
+div.result-heading-cont > span.searched-string {
+    font-size: 16px;
+    text-overflow: ellipsis;
+}
+
+div.result-heading-cont > div.action-cont {
+    float: right;
+}
+
+div.result-heading-cont > div.action-cont > div.action {
+    /* width: 34px; */
+    height: 100%;
+    padding: 3px;
+    border-radius: 3px;
+    float: right;
+    color: white;
+    font-size: 20px;
+}
+
+div.result-heading-cont > div.action-cont > div.action.active {
+    background-color: white;
+    color: #ffa41e;
+}
+
+.tile-footer-actions {
+    float: right;
+    margin: 3px;
+    font-size: 20px;
+}
+
